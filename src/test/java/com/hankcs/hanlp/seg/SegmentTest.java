@@ -491,4 +491,9 @@ public class SegmentTest extends TestCase
 //        System.out.println(seg.seg(raw));
         seg.seg(raw);
     }
+
+    public void testTimeIssue() throws Exception
+    {
+        assertTrue(HanLP.segment("1月中旬应该会发生什么").toString().contains("1月"));
+    }
 }
